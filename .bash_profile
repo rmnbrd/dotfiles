@@ -23,6 +23,10 @@ alias gm="git merge";
 # Hub alias
 alias git=hub;
 
+# Bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
 
 # Colors for Prompt
 CYAN=$(tput setaf 6);
