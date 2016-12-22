@@ -17,7 +17,7 @@ alias gpush="git push";
 alias ga="git add .";
 alias gc="git commit -m $1";
 alias gf="git fetch";
-alias gch="git checkout";
+alias gkt="git checkout";
 alias gm="git merge";
 
 # Hub alias
