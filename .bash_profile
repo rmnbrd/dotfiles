@@ -12,17 +12,17 @@ alias ..l="cd ../ && ll";
 # Git aliases
 alias gs="git status";
 alias gd="git diff";
-alias gl="git pull";
-alias gp="git push";
-alias ga="git add . && gs";
-alias gc="git commit";
-alias gf="git fetch origin";
+alias gp="git pull";
+alias gpush="git push";
+alias ga="git add .";
+alias gc="git commit -m $1";
+alias gf="git fetch";
 alias gch="git checkout";
 alias gm="git merge";
 
 
 # Colors for Prompt
-GRAY=$(tput setaf 4);
+CYAN=$(tput setaf 6);
 YELLOW=$(tput setaf 3);
 WHITE=$(tput setaf 7)
 
@@ -41,7 +41,7 @@ rand_element () {
 }
 
 # Default Prompt
-PS1="\n${YELLOW}\w${GRAY}\$(git_branch)${WHITE}\n$(rand_element 🤡 😜 🔥 🚀 👻 👾 🍕 😄 🍰 🌵)  ";
+PS1="\n${YELLOW}\w${CYAN}\$(git_branch)${WHITE}\n$(rand_element 🤡 😜 🔥 🚀 👻 👾 🍕 😄 🍰 🌵)  ";
 
 # Auto-cd
 shopt -s autocd
