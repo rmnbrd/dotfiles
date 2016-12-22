@@ -20,6 +20,9 @@ alias gf="git fetch";
 alias gch="git checkout";
 alias gm="git merge";
 
+# Hub alias
+alias git=hub;
+
 
 # Colors for Prompt
 CYAN=$(tput setaf 6);
@@ -44,5 +47,3 @@ PS1="\n${YELLOW}\w${CYAN}\$(git_branch)${WHITE}\n$(random_emoji)  ";
 
 # Auto-cd
 shopt -s autocd
-
-
