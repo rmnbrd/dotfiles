@@ -26,22 +26,21 @@ CYAN=$(tput setaf 6);
 YELLOW=$(tput setaf 3);
 WHITE=$(tput setaf 7)
 
+# Emojis
+emojis=("🤙" "✨" "🌵" "🍕" "🔥" "🐧")
+RANDOM=$$$(date +%s)
+
 function git_branch {
   # Shows the current branch if in a git repository
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \(\1\)/';
 }
 
-rand() {
-  printf $((  $1 *  RANDOM  / 32767   ))
-}
-rand_element () {
-  local -a th=("$@")
-  unset th[0]
-  printf $'%s\n' "${th[$(($(rand "${#th[*]}")+1))]}"
+random_emoji() {
+  printf ${emojis[$RANDOM % ${#emojis[@]} ]}
 }
 
 # Default Prompt
-PS1="\n${YELLOW}\w${CYAN}\$(git_branch)${WHITE}\n$(rand_element 🤡 😜 🔥 🚀 👻 👾 🍕 😄 🍰 🌵)  ";
+PS1="\n${YELLOW}\w${CYAN}\$(git_branch)${WHITE}\n$(random_emoji)  ";
 
 # Auto-cd
 shopt -s autocd
