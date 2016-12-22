@@ -31,7 +31,7 @@ fi
 # Colors for Prompt
 CYAN=$(tput setaf 6);
 YELLOW=$(tput setaf 3);
-WHITE=$(tput setaf 7)
+WHITE=$(tput sgr0)
 
 # Emojis
 emojis=("🤙" "✨" "🌵" "🍕" "🔥" "🐧", "🎉")
