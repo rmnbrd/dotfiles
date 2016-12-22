@@ -34,7 +34,7 @@ YELLOW=$(tput setaf 3);
 WHITE=$(tput setaf 7)
 
 # Emojis
-emojis=("🤙" "✨" "🌵" "🍕" "🔥" "🐧")
+emojis=("🤙" "✨" "🌵" "🍕" "🔥" "🐧", "🎉")
 RANDOM=$$$(date +%s)
 
 function git_branch {
