@@ -4,6 +4,7 @@ export TERM=xterm-256color
 
 # Personal aliases
 alias a="atom .";
+alias l="ls";
 alias ll="ls -al";
 alias ..="cd ../";
 alias ..l="cd ../ && ll";
@@ -33,17 +34,16 @@ CYAN=$(tput setaf 6);
 YELLOW=$(tput setaf 3);
 WHITE=$(tput sgr0)
 
-# Emojis
-emojis=("🤙" "✨" "🌵" "🍕" "🔥" "🐧", "🎉")
-RANDOM=$$$(date +%s)
+# Random emoji as prompt symbol
+emojis=("🤙" "✨" "🌵" "🍕" "🔥" "🎉" "🐧")
+EMOJI_INDEX=$[$[${RANDOM}%6]+1]
+random_emoji(){
+  printf ${emojis[EMOJI_INDEX]}
+}
 
 function git_branch {
   # Shows the current branch if in a git repository
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\ \(\1\)/';
-}
-
-random_emoji() {
-  printf ${emojis[$RANDOM % ${#emojis[@]} ]}
 }
 
 # Default Prompt

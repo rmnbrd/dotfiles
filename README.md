@@ -1,5 +1,6 @@
 # dotfiles
 Personal dotfiles
+*requires Bash 4.x*
 
 ## Sourcing files
 
