@@ -4,22 +4,13 @@ export TERM=xterm-256color
 
 # Personal aliases
 alias a="atom .";
+alias c="code .";
+alias o="open .";
 alias l="ls";
 alias ll="ls -al";
 alias ..="cd ../";
 alias ..l="cd ../ && ll";
 
-
-# Git aliases
-alias gs="git status";
-alias gd="git diff";
-alias gp="git pull";
-alias gpush="git push";
-alias ga="git add .";
-alias gc="git commit -m $1";
-alias gf="git fetch";
-alias gkt="git checkout";
-alias gm="git merge";
 
 # Hub alias
 alias git=hub;
@@ -34,12 +25,6 @@ CYAN=$(tput setaf 6);
 YELLOW=$(tput setaf 3);
 WHITE=$(tput sgr0)
 
-# Random emoji as prompt symbol
-emojis=("🤙" "✨" "🌵" "🍕" "🔥" "🎉" "🐧")
-EMOJI_INDEX=$[$[${RANDOM}%6]+1]
-random_emoji(){
-  printf ${emojis[EMOJI_INDEX]}
-}
 
 function git_branch {
   # Shows the current branch if in a git repository
@@ -47,7 +32,7 @@ function git_branch {
 }
 
 # Default Prompt
-PS1="\n${YELLOW}\w${CYAN}\$(git_branch)${WHITE}\n$(random_emoji)  ";
+PS1="\n${YELLOW}\w${CYAN}\$(git_branch)${WHITE}\n❯ ";
 
 # Auto-cd
 shopt -s autocd
