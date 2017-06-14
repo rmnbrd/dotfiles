@@ -24,6 +24,7 @@ alias gm="git merge";
 
 # Hub alias
 alias git=hub;
+alias g=git;
 
 # Bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
