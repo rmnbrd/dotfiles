@@ -43,7 +43,7 @@ function git_branch {
 }
 
 # Default Prompt
-PS1="\n${YELLOW}\w${CYAN}\$(git_branch)${WHITE}\n❯ ";
+PS1="\n${YELLOW}\w${CYAN}\$(git_branch)${WHITE}\n✨  ";
 
 # Auto-cd
 shopt -s autocd
