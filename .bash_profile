@@ -11,6 +11,16 @@ alias ll="ls -al";
 alias ..="cd ../";
 alias ..l="cd ../ && ll";
 
+# Git aliases
+alias gs="git status";
+alias gd="git diff";
+alias gpull="git pull";
+alias gpush="git push";
+alias ga="git add .";
+alias gc="git commit -m $1";
+alias gf="git fetch";
+alias gco="git checkout";
+alias gm="git merge";
 
 # Hub alias
 alias git=hub;
