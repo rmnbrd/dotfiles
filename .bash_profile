@@ -20,7 +20,9 @@ alias ga="git add .";
 alias gc="git commit -m $1";
 alias gf="git fetch";
 alias gco="git checkout";
+alias gb="git branch";
 alias gm="git merge";
+alias gpr="git pull-request -o";
 
 # Hub alias
 alias git=hub;
