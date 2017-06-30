@@ -18,11 +18,13 @@ alias gpull="git pull";
 alias gpush="git push";
 alias ga="git add .";
 alias gc="git commit -m $1";
+alias gca="git commit --amend";
 alias gf="git fetch";
 alias gco="git checkout";
 alias gb="git branch";
 alias gm="git merge";
 alias gpr="git pull-request -o";
+alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --";
 
 # Hub alias
 alias git=hub;
