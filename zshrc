@@ -19,6 +19,7 @@ alias hide_dotfiles="defaults write com.apple.Finder AppleShowAllFiles false; ki
 
 # Custom Git aliases
 alias git=hub;
+alias g=git;
 alias gs="git status";
 alias gc="git commit";
 alias gcm="git commit -m";
