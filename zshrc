@@ -44,6 +44,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+export GPG_TTY=$(tty)
+
 export LANG=en_US.UTF-8
 DEFAULT_USER=`whoami`
 
