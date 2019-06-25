@@ -1,17 +1,10 @@
-# dotfiles
-Personal dotfiles
-*requires Bash 4.x*
+# Personal dotfiles
+*(require ZSH)*
 
-## Sourcing files
 
 1. Clone this repo to `~/dotfiles`
 
-2. In  `~/.bash_profile`
+2. In  `~/.zshrc`
 	```
-	  source ~/dotfiles/.bash_profile
-	```
-
-3. In  `~/.vimrc`
-	```
-	  source ~/dotfiles/.vimrc
+	  source ~/dotfiles/zshrc
 	```
